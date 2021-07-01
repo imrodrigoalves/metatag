@@ -1,8 +1,8 @@
 <?php
 
-namespace Metatag\Models;
+namespace RodrigoAlves\Metatag\Models;
 
-use Metatag\Models\Tag;
+use RodrigoAlves\Metatag\Models\Tag;
 
 class NameTag extends Tag {
     

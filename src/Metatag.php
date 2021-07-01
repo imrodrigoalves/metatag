@@ -1,10 +1,10 @@
 <?php
 
-namespace Metatag;
+namespace RodrigoAlves\Metatag;
 
-use Metatag\Models\Tag;
-use Metatag\Models\NameTag;
-use Metatag\Models\PropertyTag;
+use RodrigoAlves\Metatag\Models\Tag;
+use RodrigoAlves\Metatag\Models\NameTag;
+use RodrigoAlves\Metatag\Models\PropertyTag;
 
 class Metatag
 {
