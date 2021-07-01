@@ -6,6 +6,6 @@ use RodrigoAlves\Metatag\Models\Tag;
 
 class NameTag extends Tag {
     
-    protected $identifier = 'name';
+    protected string $identifier = 'name';
     
 }

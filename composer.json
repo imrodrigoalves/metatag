@@ -3,9 +3,14 @@
   "description": "Framework agnostic PHP package to add metatags to your html.",
   "type": "library",
   "license": "MIT",
-  "prefer-stable": true,
-  "minimum-stability": "dev",
-  "require": {},
+  "authors": [
+    {
+      "name": "Rodrigo Vilela"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
   "autoload": {
     "psr-4": {
       "Metatag": "src/"

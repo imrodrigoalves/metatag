@@ -6,6 +6,6 @@ use RodrigoAlves\Metatag\Models\Tag;
 
 class PropertyTag extends Tag {
 
-    protected $identifier = 'property';
+    protected string $identifier = 'property';
     
 }

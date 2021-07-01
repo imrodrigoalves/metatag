@@ -8,7 +8,7 @@ use RodrigoAlves\Metatag\Models\PropertyTag;
 
 class Metatag
 {
-    private $tags = [];
+    private array $tags = [];
 
     public function add(Tag $tag)
     {
@@ -23,16 +23,16 @@ class Metatag
 
     public function image(string $path)
     {
-        $this->add(app()->metatag->createPropertyTag('og:image', $path))
-            ->add(app()->metatag->createPropertyTag('twitter:image', $path));
+        $this->add($this->createPropertyTag('og:image', $path))
+            ->add($this->createPropertyTag('twitter:image', $path));
             
         return $this;
     }
 
     public function title(string $title)
     {
-        $this->add(app()->metatag->createPropertyTag('og:title', $title))
-            ->add(app()->metatag->createPropertyTag('twitter:title', $title));
+        $this->add($this->createPropertyTag('og:title', $title))
+            ->add($this->createPropertyTag('twitter:title', $title));
             
         return $this;
 
@@ -40,17 +40,17 @@ class Metatag
 
     public function description(string $description)
     {
-        $this->add(app()->metatag->createNameTag('description', $description))
-            ->add(app()->metatag->createPropertyTag('og:description', $description))
-            ->add(app()->metatag->createPropertyTag('twitter:description', $description));
+        $this->add($this->createNameTag('description', $description))
+            ->add($this->createPropertyTag('og:description', $description))
+            ->add($this->createPropertyTag('twitter:description', $description));
             
         return $this;
     }
     
     public function url(string $url)
     {
-        $this->add(app()->metatag->createPropertyTag('og:url', $url))
-            ->add(app()->metatag->createPropertyTag('twitter:url', $url));
+        $this->add($this->createPropertyTag('og:url', $url))
+            ->add($this->createPropertyTag('twitter:url', $url));
             
         return $this;
     }

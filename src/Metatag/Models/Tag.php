@@ -4,9 +4,9 @@ namespace RodrigoAlves\Metatag\Models;
 
 abstract class Tag {
     
-    protected $identifier;
-    protected $name;
-    protected $value;
+    protected string $identifier;
+    protected string $name;
+    protected string $value;
     
     public function __construct(string $name, string $value)
     {
