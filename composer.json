@@ -8,12 +8,14 @@
       "name": "Rodrigo Vilela"
     }
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "php": ">=7.4"
   },
   "autoload": {
     "psr-4": {
-      "Metatag": "src/"
+      "Metatag\\": "src/"
     }
   }
 }
