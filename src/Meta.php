@@ -1,12 +1,12 @@
 <?php
 
-namespace RodrigoAlves\Metatag;
+namespace Metatag;
 
-use RodrigoAlves\Metatag\Models\Tag;
-use RodrigoAlves\Metatag\Models\NameTag;
-use RodrigoAlves\Metatag\Models\PropertyTag;
+use Metatag\Models\Tag;
+use Metatag\Models\NameTag;
+use Metatag\Models\PropertyTag;
 
-class Metatag
+class Meta
 {
     private array $tags = [];
 

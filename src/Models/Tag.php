@@ -1,6 +1,6 @@
 <?php
 
-namespace RodrigoAlves\Metatag\Models;
+namespace Metatag\Models;
 
 abstract class Tag {
     
