@@ -5,7 +5,7 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Rodrigo Vilela"
+      "name": "Rodrigo Alves"
     }
   ],
   "minimum-stability": "dev",
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Metatag\\": "src/"
+      "Metatag\\": "src/Metatag"
     }
   }
 }
