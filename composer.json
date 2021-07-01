@@ -1,13 +1,14 @@
 {
   "name": "imrodrigoalves/metatag",
-  "description": "PHP package to add metatags to your html. Framework agnostic.",
+  "description": "Framework agnostic PHP package to add metatags to your html.",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "minimum-stability": "dev",
   "require": {},
   "autoload": {
     "psr-4": {
-      "RodrigoAlves\\Metatag": "src/"
+      "Metatag": "src/"
     }
   }
 }
