@@ -29,13 +29,16 @@ class Meta
         return $this;
     }
 
-    public function title(string $title)
+    public function title(string $title, bool $isPageTitle = false)
     {
         $this->add($this->createPropertyTag('og:title', $title))
             ->add($this->createPropertyTag('twitter:title', $title));
-            
-        return $this;
 
+        if($isPageTitle){
+            $this->pageTitle($title);
+        }
+
+        return $this;
     }
 
     public function description(string $description)
@@ -55,6 +58,12 @@ class Meta
         return $this;
     }
 
+    public function pageTitle(string $title)
+    {
+        $this->add($this->createHtmlTag('title', $title));
+        return $this;
+    }
+
     public function toHtml()
     {
         foreach ($this->tags as $tag) {
@@ -70,6 +79,11 @@ class Meta
     public function createNameTag(string $name, string $value)
     {
         return new NameTag($name, $value);
+    }
+
+    public function createHtmlTag(string $tagName, string $title)
+    {
+        return new HtmlTag($tagName, $title);
     }
 
     private function getKeyIfDuplicate(Tag $tag)
