@@ -5,6 +5,7 @@ namespace Metatag;
 use Metatag\Models\Tag;
 use Metatag\Models\NameTag;
 use Metatag\Models\PropertyTag;
+use Metatag\Models\HtmlTag;
 
 class Meta
 {
@@ -29,13 +30,16 @@ class Meta
         return $this;
     }
 
-    public function title(string $title)
+    public function title(string $title, bool $isPageTitle = false)
     {
         $this->add($this->createPropertyTag('og:title', $title))
             ->add($this->createPropertyTag('twitter:title', $title));
-            
-        return $this;
 
+        if($isPageTitle){
+            $this->pageTitle($title);
+        }
+
+        return $this;
     }
 
     public function description(string $description)
@@ -55,6 +59,12 @@ class Meta
         return $this;
     }
 
+    public function pageTitle(string $title)
+    {
+        $this->add($this->createHtmlTag('title', $title));
+        return $this;
+    }
+
     public function toHtml()
     {
         foreach ($this->tags as $tag) {
@@ -62,14 +72,19 @@ class Meta
         }
     }
 
-    public function createPropertyTag(string $name, string $value)
+    public function createPropertyTag(string $name, string $value): Tag
     {
         return new PropertyTag($name, $value);
     }
 
-    public function createNameTag(string $name, string $value)
+    public function createNameTag(string $name, string $value): Tag
     {
         return new NameTag($name, $value);
+    }
+
+    public function createHtmlTag(string $tagName, string $title): Tag
+    {
+        return new HtmlTag($tagName, $title);
     }
 
     private function getKeyIfDuplicate(Tag $tag)
